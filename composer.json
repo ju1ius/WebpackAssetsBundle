@@ -1,0 +1,27 @@
+{
+    "name": "ju1ius/webpack-assets-bundle",
+    "description": "Integrates Webpack into Symfony2",
+    "keywords": ["webpack", "assets", "compression", "minification"],
+    "homepage": "https://github.com/ju1ius/Ju1iusWebpackAssetsBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jules Bernable",
+            "email": "ju1ius@laposte.net",
+            "homepage": "http://github.com/ju1ius"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/dependency-injection": "^2.7|^3.0",
+        "symfony/event-dispatcher": "^2.7|^3.0",
+        "symfony/http-foundation": "^2.7|^3.0",
+        "symfony/http-kernel": "^2.7|^3.0",
+        "symfony/twig-bundle": "^2.7|^3.0"
+    },
+    "autoload": {
+        "psr-4": { "ju1ius\\WebpackBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+
+    <services>
+
+        <service
+            id="ju1ius_webpack_assets.twig_extension"
+            class="ju1ius\WebpackAssetsBundle\Twig\WebpackAssetsExtension"
+            public="false"
+        >
+            <argument type="service" id="ju1ius_webpack_assets.asset_helper" />
+            <tag name="twig.extension" />
+        </service>
+
+        <service
+            id="ju1ius_webpack_assets.templating.helper"
+            class="ju1ius\WebpackAssetsBundle\Templating\Helper\WebpackAssetsHelper"
+        >
+            <argument type="service" id="ju1ius_webpack_assets.asset_helper" />
+            <tag name="templating.helper" alias="webpack_assets" />
+        </service>
+
+    </services>
+    
+</container>
