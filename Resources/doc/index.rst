@@ -122,7 +122,7 @@ Run webpack
 
 .. code:: bash
 
-  ./node_modules/.bin/webpack --config webpack.config.js
+  webpack --config webpack.config.js
 
 You can now reference the "front" entry in your twig templates by calling the webpack_asset function:
 
@@ -169,10 +169,8 @@ Run the server:
 Bonus step: adding css support
 ------------------------------
 
-Install 
-`css-loader <https://www.npmjs.com/package/css-loader>`_
-and
-`extract-text-webpack-plugin <https://www.npmjs.com/package/extract-text-webpack-plugin>`_
+Install `css-loader <https://www.npmjs.com/package/css-loader>`_
+and `extract-text-webpack-plugin <https://www.npmjs.com/package/extract-text-webpack-plugin>`_
 
 .. code:: bash
 
@@ -217,11 +215,14 @@ Let's modify our webpack.config.js:
   };
   
 
-You can now reference the stylesheet in your templates (notice the second argument passed to the webpack_asset function):
+You can now reference the stylesheet in your templates (notice the second argument passed to the webpack_asset function),
+with twig:
   
 .. code:: twig
 
   <link rel="stylesheet" href="{{ webpack_asset('front', 'css') }}" />
+
+or in php:
 
 .. code:: php
 
