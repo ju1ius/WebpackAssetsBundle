@@ -22,7 +22,6 @@ class Configuration implements ConfigurationInterface
 
         $rootNode->children()
             ->scalarNode('revision_manifest')
-                ->isRequired()
                 ->cannotBeEmpty()
                 ->defaultValue('%kernel.root_dir%/../webpack-assets.json')
             ->end()
