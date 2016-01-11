@@ -20,7 +20,7 @@ Then install the minimal required javascript dependencies
 .. code:: bash
   
   cd /path/to/your/symfony-project
-  npm instal -g webpack webpack-dev-server
+  npm install -g webpack webpack-dev-server
   npm install --save-dev webpack assets-webpack-plugin
 
 Install the bundle with composer:
